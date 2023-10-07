@@ -103,7 +103,11 @@ const components: ThemeOptions['components'] = {
     },
   },
   MuiCardMedia: {},
-  // MuiCheckbox: checkboxOverride,
+  MuiCheckbox: {
+    defaultProps: {
+      size: 'small',
+    },
+  },
   MuiChip: {
     variants: [
       {

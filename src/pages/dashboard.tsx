@@ -1,5 +1,5 @@
+import { Checkbox } from '@/components';
 import { Box, Container, FormControlLabel, TextField, Typography } from '@mui/material';
-import Checkbox from '@mui/material/Checkbox';
 
 const DashboardPage = () => {
   return (

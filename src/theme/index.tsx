@@ -12,7 +12,7 @@ import {
 import components from './components';
 import { PropsWithChildren } from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, PaletteColorOptions } from '@mui/material';
 
 export const SimplifyProvider = ({ children }: PropsWithChildren) => {
   const theme: Theme = createTheme({
@@ -44,6 +44,10 @@ declare module '@mui/material/styles' {
   interface SimplePaletteColorOptions {
     lighter?: string;
     darker?: string;
+  }
+
+  interface Palette {
+    secondary: PaletteColor;
   }
 
   interface Theme {
