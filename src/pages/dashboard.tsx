@@ -1,7 +1,16 @@
-import { Typography } from '@mui/material';
+import { Box, Container, FormControlLabel, TextField, Typography } from '@mui/material';
+import Checkbox from '@mui/material/Checkbox';
 
 const DashboardPage = () => {
-  return <Typography variant="h3">Dashboard</Typography>;
+  return (
+    <Container maxWidth="xl">
+      <Box>
+        <TextField label="Email address" size="small" />
+      </Box>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="HIhihi" />
+      <Typography variant="h3">Dashboard</Typography>
+    </Container>
+  );
 };
 
 export default DashboardPage;

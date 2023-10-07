@@ -1,7 +1,7 @@
 import { Iconify } from '@/components';
 import { useResponsive } from '@/hooks';
 import { Box, Drawer, IconButton, Stack } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { SidebarGroupType } from '../../types';
 import { Logo } from './logo';
 import { SIDEBAR_MINI_WIDTH, SIDEBAR_WIDTH } from '@/layouts/constants.ts';
@@ -19,7 +19,9 @@ export default function Aside({ groups, logo }: Props) {
 
   const { openSidebar, onOpenSidebar, isMinimize, onMinimize } = useDashboardLayout();
 
-  const WIDTH = isMinimize ? SIDEBAR_MINI_WIDTH : SIDEBAR_WIDTH;
+  const WIDTH = useMemo(() => {
+    return isMinimize ? SIDEBAR_MINI_WIDTH : SIDEBAR_WIDTH;
+  }, [isMinimize]);
 
   const renderContent = () => {
     return (
