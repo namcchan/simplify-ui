@@ -9,8 +9,8 @@ import { DashboardLayoutProvider } from '@/layouts/original/provider';
 const OriginalLayout = () => {
   return (
     <DashboardLayoutProvider>
-      <Box display="flex" minHeight="100vh" width="100%">
-        <Header />
+      <Header />
+      <Box minHeight={1} display="flex">
         <Aside groups={groupRoutes} />
         <Main>
           <Outlet />

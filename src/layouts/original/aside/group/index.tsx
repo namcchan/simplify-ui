@@ -1,21 +1,12 @@
 'use client';
 
-import {
-  Box,
-  Collapse,
-  List,
-  ListItemText,
-  Typography,
-  alpha,
-  useTheme,
-  Link,
-} from '@mui/material';
+import { Box, Collapse, List, ListItemText, Typography, alpha, useTheme } from '@mui/material';
 import { useState } from 'react';
 import { AsideItem, AsideItemIcon } from './styles';
 import _ from 'lodash';
 import { useDashboardLayout } from '../../provider';
 import { Iconify } from '@/components';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 export default function AsideGroup({ data = [], ...other }: any) {
   const { isMinimize } = useDashboardLayout();
@@ -52,7 +43,7 @@ function SidebarItemRoot({ item, level }: { item: any; level: number }) {
   let isActive = pathname.startsWith(path);
   const { isMinimize } = useDashboardLayout();
 
-  if (path === '/') {
+  if (path === '/dashboard') {
     isActive = pathname === path;
   }
 
@@ -68,7 +59,7 @@ function SidebarItemRoot({ item, level }: { item: any; level: number }) {
         className={isParentActive ? 'active' : ''}
         onClick={() => setOpen((v: boolean) => !v)}
         component={children ? Box : Link}
-        href={path}
+        to={path}
         sx={{
           transition: 'all 250ms ease',
           ...(isMinimize && {

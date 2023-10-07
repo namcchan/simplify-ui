@@ -1,12 +1,13 @@
 import { Iconify } from '@/components';
 import { useResponsive } from '@/hooks';
 import { Box, Drawer, IconButton, Stack } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { SidebarGroupType } from '../../types';
 import { Logo } from './logo';
 import { SIDEBAR_MINI_WIDTH, SIDEBAR_WIDTH } from '@/layouts/constants.ts';
 import { useDashboardLayout } from '../provider';
 import AsideGroup from '@/layouts/original/aside/group';
+import { Scrollbar } from '@/components/scrollbar';
 
 type Props = {
   groups: SidebarGroupType[];
@@ -15,80 +16,68 @@ type Props = {
 
 export default function Aside({ groups, logo }: Props) {
   const isDesktop = useResponsive('up', 'lg');
-  const [isMounted, setMounted] = useState(false);
 
   const { openSidebar, onOpenSidebar, isMinimize, onMinimize } = useDashboardLayout();
 
   const WIDTH = isMinimize ? SIDEBAR_MINI_WIDTH : SIDEBAR_WIDTH;
 
+  const renderContent = () => {
+    return (
+      <Scrollbar
+        sx={{
+          height: 1,
+          '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column' },
+        }}
+      >
+        {logo ? logo : <Logo />}
+        {groups.map(({ title, routes }) => (
+          <AsideGroup key={title} title={title} data={routes} />
+        ))}
+      </Scrollbar>
+    );
+  };
+
   useEffect(() => {
     if (!isDesktop && isMinimize) {
       onMinimize();
     }
-  }, [isDesktop]);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const renderContent = (
-    <Stack sx={{ position: 'relative' }}>
-      {isDesktop && (
-        <IconButton
-          disableRipple
-          onClick={onMinimize}
-          size="small"
-          color="inherit"
-          sx={{
-            transition: 'all 250ms ease',
-            backgroundColor: 'white',
-            border: '1px dashed',
-            borderColor: 'grey.300',
-            position: 'fixed',
-            top: 22,
-            left: WIDTH,
-            zIndex: 1001,
-            transform: `translateX(-50%) rotateY(${isMinimize ? '3.142rad' : '0'})`,
-          }}
-        >
-          <Iconify size={16} sx={{ color: 'grey.600' }} icon="charm:chevron-right" />
-        </IconButton>
-      )}
-      {logo ? logo : <Logo />}
-      {groups.map(({ title, routes }) => (
-        <AsideGroup key={title} title={title} data={routes} />
-      ))}
-    </Stack>
-  );
+  }, [isDesktop, isMinimize, onMinimize]);
 
   return (
     <Box
+      component="nav"
       sx={{
         flexShrink: { lg: 0 },
         width: { lg: WIDTH },
       }}
     >
-      <Drawer
-        open
-        variant="permanent"
-        PaperProps={{
-          sx: (theme) => ({
-            boxShadow: 'none',
-            transition: 'all 250ms ease',
-            width: WIDTH,
-            bgcolor: 'common.white',
-            borderRightStyle: 'dashed',
-            display: 'none',
-            borderRadius: 0,
-            [theme.breakpoints.up('lg')]: {
-              display: 'block',
-            },
-          }),
-        }}
-      >
-        {renderContent}
-      </Drawer>
-      {!isDesktop && isMounted && (
+      {isDesktop && (
+        <>
+          <IconButton
+            disableRipple
+            onClick={onMinimize}
+            size="small"
+            color="inherit"
+            sx={{
+              transition: 'all 250ms ease',
+              backgroundColor: 'white',
+              border: '1px dashed',
+              borderColor: 'grey.300',
+              position: 'fixed',
+              top: 22,
+              left: WIDTH,
+              zIndex: 1101,
+              transform: `translateX(-50%) rotateY(${isMinimize ? '3.142rad' : '0'})`,
+            }}
+          >
+            <Iconify size={16} sx={{ color: 'grey.600' }} icon="charm:chevron-right" />
+          </IconButton>
+          <Stack width={{ lg: WIDTH }} position="fixed" height="100%">
+            {renderContent()}
+          </Stack>
+        </>
+      )}
+      {!isDesktop && (
         <Drawer
           open={openSidebar}
           onClose={onOpenSidebar}
@@ -99,7 +88,7 @@ export default function Aside({ groups, logo }: Props) {
             sx: { width: SIDEBAR_WIDTH, borderRadius: 0 },
           }}
         >
-          {renderContent}
+          {renderContent()}
         </Drawer>
       )}
     </Box>

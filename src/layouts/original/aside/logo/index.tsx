@@ -13,8 +13,8 @@ export const Logo = () => {
         px: 2.5,
         py: 2,
         display: 'inline-flex',
-        borderBottomStyle: 'dashed',
-        borderColor: 'grey.300',
+        // borderBottomStyle: 'dashed',
+        // borderColor: 'grey.300',
       }}
     >
       <Box

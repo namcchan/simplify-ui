@@ -18,6 +18,7 @@ const StyledAppBar = styled((props: AppBarProps & { state: any }) => <AppBar {..
   state,
 }) => {
   return {
+    zIndex: 1101,
     borderRadius: 0,
     transition: 'all 250ms ease',
     ...bgBlur({ color: theme.palette.background.default }),

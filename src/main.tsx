@@ -10,10 +10,17 @@ import {
 import OriginalLayout from './layouts/original';
 import Dashboard from './pages/dashboard.tsx';
 
+import 'simplebar-react/dist/simplebar.min.css';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<OriginalLayout />}>
-      <Route path="dashboard" element={<Dashboard />} />
+    <Route path="/dashboard" element={<OriginalLayout />}>
+      <Route path="" element={<Dashboard />} />
+      <Route path="e-commerce" element={<Dashboard />} />
+      <Route path="analytics" element={<Dashboard />} />
+      <Route path="banking" element={<Dashboard />} />
+      <Route path="booking" element={<Dashboard />} />
+      <Route path="file" element={<Dashboard />} />
     </Route>,
   ),
 );

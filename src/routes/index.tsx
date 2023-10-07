@@ -1,4 +1,4 @@
-import { SvgColor } from '../components';
+import { SvgColor } from '@/components';
 import { SidebarGroupType } from '../layouts/types';
 
 const icon = (name: string) => (
@@ -10,33 +10,33 @@ export const groupRoutes: Array<SidebarGroupType> = [
     routes: [
       {
         title: 'App',
-        path: '/',
-        icon: <SvgColor src="/assets/icons/Files/File.svg" sx={{ width: 1, height: 1 }} />,
+        path: '/dashboard',
+        icon: icon('ic_dashboard'),
       },
       {
         title: 'E-Commerce',
-        path: '/e-commerce',
-        icon: <SvgColor src="/assets/icons/Files/File.svg" sx={{ width: 1, height: 1 }} />,
+        path: '/dashboard/e-commerce',
+        icon: icon('ic_cart'),
       },
       {
         title: 'Analytics',
-        path: '/analytics',
+        path: '/dashboard/analytics',
         icon: icon('ic_analytics'),
       },
       {
         title: 'Banking',
-        path: '/banking',
-        icon: <SvgColor src="/assets/icons/Files/File.svg" sx={{ width: 1, height: 1 }} />,
+        path: '/dashboard/banking',
+        icon: icon('ic_banking'),
       },
       {
         title: 'Booking',
-        path: '/booking',
-        icon: <SvgColor src="/assets/icons/Files/File.svg" sx={{ width: 1, height: 1 }} />,
+        path: '/dashboard/booking',
+        icon: icon('ic_booking'),
       },
       {
         title: 'File',
-        path: '/file',
-        icon: <SvgColor src="/assets/icons/Files/File.svg" sx={{ width: 1, height: 1 }} />,
+        path: '/dashboard/file',
+        icon: icon('ic_file'),
       },
     ],
   },
@@ -45,54 +45,181 @@ export const groupRoutes: Array<SidebarGroupType> = [
     routes: [
       {
         title: 'user',
-        path: '/user',
+        path: '/dashboard/user',
         icon: icon('ic_user'),
         children: [
           {
             title: 'Profile',
-            path: '/user/profile',
+            path: '/dashboard/user/profile',
           },
           {
             title: 'Cards',
-            path: '/user/cards',
+            path: '/dashboard/user/cards',
           },
           {
             title: 'List',
-            path: '/user/list',
+            path: '/dashboard/user/list',
           },
           {
             title: 'Account',
-            path: '/user/account',
+            path: '/dashboard/user/account',
           },
         ],
       },
       {
         title: 'Product',
-        path: '/product',
-        icon: icon('ic_cart'),
+        path: '/dashboard/product',
+        icon: icon('ic_product'),
         children: [
           {
             title: 'List',
-            path: '/user/profile',
+            path: '/dashboard/product',
           },
           {
             title: 'Detail',
-            path: '/user/cards',
+            path: '/dashboard/product/details',
           },
           {
             title: 'Create',
-            path: '/user/list',
+            path: '/dashboard/product/create',
           },
           {
             title: 'Edit',
-            path: '/user/account',
+            path: '/dashboard/product/edit',
           },
         ],
       },
       {
-        title: 'blog',
+        title: 'Order',
+        path: '/dashboard/order',
+        icon: icon('ic_order'),
+        children: [
+          {
+            title: 'List',
+            path: '/dashboard/order',
+          },
+          {
+            title: 'Detail',
+            path: '/dashboard/order/details',
+          },
+        ],
+      },
+      {
+        title: 'Invoice',
+        path: '/dashboard/invoice',
+        icon: icon('ic_invoice'),
+        children: [
+          {
+            title: 'List',
+            path: '/dashboard/invoice',
+          },
+          {
+            title: 'Detail',
+            path: '/dashboard/invoice/details',
+          },
+          {
+            title: 'Create',
+            path: '/dashboard/invoice/create',
+          },
+          {
+            title: 'Edit',
+            path: '/dashboard/invoice/edit',
+          },
+        ],
+      },
+      {
+        title: 'Blog',
         path: '/dashboard/blog',
         icon: icon('ic_blog'),
+        children: [
+          {
+            title: 'List',
+            path: '/dashboard/blog',
+          },
+          {
+            title: 'Detail',
+            path: '/dashboard/blog/details',
+          },
+          {
+            title: 'Create',
+            path: '/dashboard/blog/create',
+          },
+          {
+            title: 'Edit',
+            path: '/dashboard/blog/edit',
+          },
+        ],
+      },
+      {
+        title: 'Job',
+        path: '/dashboard/job',
+        icon: icon('ic_job'),
+        children: [
+          {
+            title: 'List',
+            path: '/dashboard/job',
+          },
+          {
+            title: 'Detail',
+            path: '/dashboard/job/details',
+          },
+          {
+            title: 'Create',
+            path: '/dashboard/job/create',
+          },
+          {
+            title: 'Edit',
+            path: '/dashboard/job/edit',
+          },
+        ],
+      },
+      {
+        title: 'Tour',
+        path: '/dashboard/tour',
+        icon: icon('ic_tour'),
+        children: [
+          {
+            title: 'List',
+            path: '/dashboard/tour',
+          },
+          {
+            title: 'Detail',
+            path: '/dashboard/tour/details',
+          },
+          {
+            title: 'Create',
+            path: '/dashboard/tour/create',
+          },
+          {
+            title: 'Edit',
+            path: '/dashboard/tour/edit',
+          },
+        ],
+      },
+      {
+        title: 'File Manager',
+        path: '/dashboard/file-manager',
+        icon: icon('ic_folder'),
+      },
+      {
+        title: 'Mail',
+        path: '/dashboard/mail',
+        icon: icon('ic_mail'),
+      },
+      {
+        title: 'Chat',
+        path: '/dashboard/chat',
+        icon: icon('ic_chat'),
+      },
+      {
+        title: 'Calendar',
+        path: '/dashboard/calendar',
+        icon: icon('ic_calendar'),
+      },
+      {
+        title: 'Kanban',
+        path: '/dashboard/kanban',
+        icon: icon('ic_kanban'),
       },
       {
         title: 'login',
