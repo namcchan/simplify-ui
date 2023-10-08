@@ -2,7 +2,7 @@ import { Iconify } from '@/components';
 import { useResponsive } from '@/hooks';
 import { Box, Drawer, IconButton, Stack } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
-import { SidebarGroupType } from '../../types';
+import { AsideGroupType } from '../../types';
 import { Logo } from './logo';
 import { SIDEBAR_MINI_WIDTH, SIDEBAR_WIDTH } from '@/layouts/constants.ts';
 import { useDashboardLayout } from '../provider';
@@ -10,7 +10,7 @@ import AsideGroup from '@/layouts/original/aside/group';
 import { Scrollbar } from '@/components/scrollbar';
 
 type Props = {
-  groups: SidebarGroupType[];
+  groups: AsideGroupType[];
   logo?: React.ReactNode;
 };
 
@@ -74,7 +74,15 @@ export default function Aside({ groups, logo }: Props) {
           >
             <Iconify size={16} sx={{ color: 'grey.600' }} icon="charm:chevron-right" />
           </IconButton>
-          <Stack width={{ lg: WIDTH }} position="fixed" height="100%">
+          <Stack
+            width={{ lg: WIDTH }}
+            position="fixed"
+            height="100%"
+            sx={{
+              borderRight: '1px dashed',
+              borderColor: (theme) => theme.palette.grey[300],
+            }}
+          >
             {renderContent()}
           </Stack>
         </>

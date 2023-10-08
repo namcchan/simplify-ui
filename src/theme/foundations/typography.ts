@@ -1,15 +1,7 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 import { pxToRem } from './functions';
 
-export function responsiveFontSizes({
-  sm,
-  md,
-  lg,
-}: {
-  sm: number;
-  md: number;
-  lg: number;
-}) {
+export function responsiveFontSizes({ sm, md, lg }: { sm: number; md: number; lg: number }) {
   return {
     '@media (min-width:600px)': {
       fontSize: pxToRem(sm),

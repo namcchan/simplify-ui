@@ -1,18 +1,18 @@
-import { Palette, Theme, createTheme } from '@mui/material/styles';
+import { createTheme, Palette, Theme } from '@mui/material/styles';
 import {
-  palette,
-  functions,
-  FunctionsType,
-  typography,
   CustomShadows,
   customShadows,
-  shadows,
+  functions,
+  FunctionsType,
   GlobalStyles,
+  palette,
+  shadows,
+  typography,
 } from './foundations';
 import components from './components';
 import { PropsWithChildren } from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { CssBaseline, PaletteColorOptions } from '@mui/material';
+import { CssBaseline } from '@mui/material';
 
 export const SimplifyProvider = ({ children }: PropsWithChildren) => {
   const theme: Theme = createTheme({

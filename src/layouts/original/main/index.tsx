@@ -3,7 +3,7 @@ import { HEADER_DESKTOP, HEADER_MOBILE } from '@/layouts/constants.ts';
 
 export const Main = styled('main')(({ theme }) => ({
   transition: 'all 250ms ease',
-  backgroundColor: theme.palette.grey[100],
+  backgroundColor: theme.palette.background.default,
   flexGrow: 1,
   display: 'flex',
   flexDirection: 'column',

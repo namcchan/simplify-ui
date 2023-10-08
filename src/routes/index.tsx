@@ -1,10 +1,10 @@
 import { SvgColor } from '@/components';
-import { SidebarGroupType } from '../layouts/types';
+import { AsideGroupType } from '../layouts/types';
 
 const icon = (name: string) => (
   <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />
 );
-export const groupRoutes: Array<SidebarGroupType> = [
+export const groupRoutes: Array<AsideGroupType> = [
   {
     title: 'Overview',
     routes: [

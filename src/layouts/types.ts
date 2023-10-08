@@ -1,11 +1,13 @@
-export type SidebarGroupType = {
+import React from 'react';
+
+export type AsideGroupType = {
   title?: string;
-  routes: Array<SidebarRouteType>;
+  routes: Array<AsideRouteType>;
 };
 
-export type SidebarRouteType = {
+export type AsideRouteType = {
   title: string;
   path: string;
   icon?: React.ReactNode;
-  children?: Array<SidebarRouteType>;
+  children?: Array<AsideRouteType>;
 };

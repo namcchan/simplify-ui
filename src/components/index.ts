@@ -1,3 +1,4 @@
-export * from './svg-color.tsx';
-export * from './iconify.tsx';
+export * from './svg-color';
+export * from './iconify';
 export { default as Checkbox } from './checkbox';
+export * from './cards';

@@ -96,7 +96,7 @@ function SidebarItemRoot({ item, level }: { item: any; level: number }) {
           primaryTypographyProps={{
             fontSize: isMinimize ? 11 : 14,
             color: isActive ? 'text-primary' : 'grey.600',
-            fontWeight: isActive ? 'bold' : 'normal',
+            fontWeight: isActive ? '600' : 'normal',
           }}
           primary={title}
         />

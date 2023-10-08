@@ -98,7 +98,7 @@ const components: ThemeOptions['components'] = {
     },
     styleOverrides: {
       root: ({ theme }) => ({
-        padding: theme.spacing(3, 3, 0),
+        padding: theme.spacing(3, 2, 3, 3),
       }),
     },
   },
@@ -177,7 +177,14 @@ const components: ThemeOptions['components'] = {
   MuiDialogContent: {},
   MuiDialogContentText: {},
   MuiDialogTitle: {},
-  MuiDivider: {},
+  MuiDivider: {
+    defaultProps: {},
+    styleOverrides: {
+      root: {
+        borderStyle: 'dashed',
+      },
+    },
+  },
   MuiDrawer: {},
   MuiFab: {},
   MuiFilledInput: {
