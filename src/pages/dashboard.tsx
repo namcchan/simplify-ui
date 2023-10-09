@@ -1,23 +1,8 @@
-import { Iconify, WelcomeCard } from '@/components';
-import {
-  Box,
-  Button,
-  Card,
-  CardHeader,
-  Chip,
-  Container,
-  Divider,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-} from '@mui/material';
+import { WelcomeCard } from '@/components';
+import { Button, Card, Container } from '@mui/material';
 import { IconWelcome2 } from '@/components/icons';
 import Grid from '@mui/material/Unstable_Grid2';
-import { SummaryCard } from '@/sections/app/summary-card.tsx';
-import { CurrentDownload } from '@/sections/app/current-download.tsx';
-import { Scrollbar } from '@/components/scrollbar';
+import { NewInvoice, CurrentDownload, SummaryCard, TopRelatedApplications } from '@/sections/app';
 
 const DashboardPage = () => {
   return (
@@ -52,89 +37,10 @@ const DashboardPage = () => {
           <Card sx={{ minHeight: 200 }}></Card>
         </Grid>
         <Grid xs={12} lg={8}>
-          <Card>
-            <CardHeader title="New Invoice" />
-            <Scrollbar>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Invoice Id</TableCell>
-                    <TableCell>Category</TableCell>
-                    <TableCell>Price</TableCell>
-                    <TableCell>Status</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>INV-1990</TableCell>
-                    <TableCell>Android</TableCell>
-                    <TableCell>$83.74</TableCell>
-                    <TableCell>
-                      <Chip
-                        color="success"
-                        variant="soft"
-                        label="Paid"
-                        size="small"
-                        sx={{ fontWeight: 'bold' }}
-                      />
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>INV-1990</TableCell>
-                    <TableCell>Android</TableCell>
-                    <TableCell>$83.74</TableCell>
-                    <TableCell>
-                      <Chip
-                        color="success"
-                        variant="soft"
-                        label="Paid"
-                        size="small"
-                        sx={{ fontWeight: 'bold' }}
-                      />
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>INV-1990</TableCell>
-                    <TableCell>Android</TableCell>
-                    <TableCell>$83.74</TableCell>
-                    <TableCell>
-                      <Chip
-                        color="success"
-                        variant="soft"
-                        label="Paid"
-                        size="small"
-                        sx={{ fontWeight: 'bold' }}
-                      />
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>INV-1990</TableCell>
-                    <TableCell>Android</TableCell>
-                    <TableCell>$83.74</TableCell>
-                    <TableCell>
-                      <Chip
-                        color="success"
-                        variant="soft"
-                        label="Paid"
-                        size="small"
-                        sx={{ fontWeight: 'bold' }}
-                      />
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </Scrollbar>
-
-            <Divider />
-            <Box textAlign="right" p={2}>
-              <Button variant="text" size="small">
-                View all <Iconify icon="charm:chevron-right" />
-              </Button>
-            </Box>
-          </Card>
+          <NewInvoice />
         </Grid>
         <Grid xs={12} md={6} lg={4}>
-          <Card sx={{ minHeight: 200 }}></Card>
+          <TopRelatedApplications />
         </Grid>
         <Grid xs={12} md={6} lg={4}>
           <Card sx={{ minHeight: 200 }}></Card>

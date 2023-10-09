@@ -24,7 +24,13 @@ const components: ThemeOptions['components'] = {
       }),
     },
   },
-  MuiAvatar: {},
+  MuiAvatar: {
+    styleOverrides: {
+      root: ({ theme }) => ({
+        backgroundColor: theme.palette.grey[200],
+      }),
+    },
+  },
   MuiAvatarGroup: {},
   MuiBackdrop: {
     styleOverrides: {
