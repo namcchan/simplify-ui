@@ -7,37 +7,47 @@ export const CurrentDownload = () => {
 
   const series: ApexNonAxisChartSeries = [12244, 53345, 44313, 78343];
   const options: ApexOptions = {
-    chart: { type: 'donut' },
+    chart: { type: 'donut', height: 240, width: '100%' },
     labels: ['Mac', 'Window', 'IOS', 'Android'],
-    legend: { show: true },
+    legend: { show: true, position: 'bottom' },
     dataLabels: { enabled: false },
-    tooltip: { enabled: true },
-    // fill: {
-    //   colors: [
-    //     theme.palette.info.main,
-    //     theme.palette.error.main,
-    //     theme.palette.warning.main,
-    //     theme.palette.success.main,
-    //   ],
-    // },
-    stroke: { width: 0 },
+    tooltip: {
+      enabled: true,
+      style: {},
+    },
+    colors: [
+      theme.palette.info.main,
+      theme.palette.error.main,
+      theme.palette.warning.main,
+      theme.palette.primary.main,
+    ],
+    fill: {
+      colors: [
+        theme.palette.info.main,
+        theme.palette.error.main,
+        theme.palette.warning.main,
+        theme.palette.primary.main,
+      ],
+    },
+    stroke: { width: 2, colors: ['#FFFFFF'] },
+
     plotOptions: {
       pie: {
+        startAngle: 10,
         expandOnClick: true,
         donut: {
-          size: '75%',
+          size: '90%',
           labels: {
             show: true,
-            name: { show: false },
+            name: { show: true },
+            value: { show: true },
             total: {
               show: true,
               showAlways: true,
               formatter: function (w) {
                 const totals = w.globals.seriesTotals;
-
                 const result = totals.reduce((a: number, b: number) => a + b, 0);
-
-                return (result / 1000).toFixed(3);
+                return Intl.NumberFormat('en').format(result);
               },
             },
           },
@@ -48,11 +58,11 @@ export const CurrentDownload = () => {
 
   return (
     <Card>
-      <CardHeader title="Current Download" sx={{ mb: 5 }} />
+      <CardHeader title="Current Download" />
       <Box
         component={ReactApexChart}
-        display="flex"
-        flexDirection="column"
+        mb={3}
+        mt={4}
         options={options}
         series={series}
         type="donut"

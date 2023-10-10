@@ -3,6 +3,7 @@ import { Button, Card, Container } from '@mui/material';
 import { IconWelcome2 } from '@/components/icons';
 import Grid from '@mui/material/Unstable_Grid2';
 import { NewInvoice, CurrentDownload, SummaryCard, TopRelatedApplications } from '@/sections/app';
+import { AreaInstalled } from '@/sections/app/area-installed.tsx';
 
 const DashboardPage = () => {
   return (
@@ -30,11 +31,11 @@ const DashboardPage = () => {
         <Grid xs={12} md={4}>
           <SummaryCard title="Total Downloads" numberPercent={29.4} numberShort={92300} />
         </Grid>
-        <Grid xs={12} md={6}>
+        <Grid xs={12} md={4}>
           <CurrentDownload />
         </Grid>
-        <Grid xs={12} md={6}>
-          <Card sx={{ minHeight: 200 }}></Card>
+        <Grid xs={12} md={8}>
+          <AreaInstalled />
         </Grid>
         <Grid xs={12} lg={8}>
           <NewInvoice />
