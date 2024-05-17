@@ -1,4 +1,5 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
+
 import { pxToRem } from './functions';
 
 export function responsiveFontSizes({ sm, md, lg }: { sm: number; md: number; lg: number }) {
@@ -17,11 +18,13 @@ export function responsiveFontSizes({ sm, md, lg }: { sm: number; md: number; lg
 
 // ----------------------------------------------------------------------
 
-const FONT_PRIMARY = 'Public Sans, sans-serif'; // Google Font
+// const FONT_PRIMARY = 'Public Sans, sans-serif'; // Google Font
 // const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
+const primaryFont = 'Public Sans, sans-serif';
+// const secondaryFont = 'Barlow, sans-serif';
 
 export const typography: TypographyOptions = {
-  fontFamily: FONT_PRIMARY,
+  fontFamily: primaryFont,
   fontWeightRegular: 400,
   fontWeightMedium: 600,
   fontWeightBold: 700,

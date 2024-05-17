@@ -1,6 +1,6 @@
-import { forwardRef } from 'react';
 import { Icon, IconifyIcon } from '@iconify/react';
 import { Box, BoxProps, SxProps } from '@mui/material';
+import { forwardRef } from 'react';
 
 type IconifyProps = {
   sx?: SxProps;
