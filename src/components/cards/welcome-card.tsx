@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography, alpha, useTheme } from '@mui/material';
+import { alpha, Box, Button, Stack, Typography, useTheme } from '@mui/material';
 
 type Props = {
   title: string;

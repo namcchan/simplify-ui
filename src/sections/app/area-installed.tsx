@@ -1,6 +1,7 @@
-import { Button, ButtonBase, Card, CardHeader, MenuItem, Popover, Typography } from '@mui/material';
-import { Iconify } from '@/components';
+import { ButtonBase, Card, CardHeader, MenuItem, Popover, Typography } from '@mui/material';
 import { useState } from 'react';
+
+import { Iconify } from '@/components';
 
 export const AreaInstalled = () => {
   const [open, setOpen] = useState(null);

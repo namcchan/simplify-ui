@@ -1,6 +1,6 @@
+import { Box, IconButton, MenuItem, Popover, Stack } from '@mui/material';
+import { alpha, SxProps, Theme } from '@mui/material/styles';
 import { useState } from 'react';
-import { SxProps, Theme, alpha } from '@mui/material/styles';
-import { Box, MenuItem, Stack, IconButton, Popover } from '@mui/material';
 
 const LANGS = [
   {

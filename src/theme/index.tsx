@@ -1,4 +1,9 @@
+import { ThemeProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
 import { createTheme, Palette, Theme } from '@mui/material/styles';
+import { PropsWithChildren } from 'react';
+
+import components from './components';
 import {
   CustomShadows,
   customShadows,
@@ -9,10 +14,6 @@ import {
   shadows,
   typography,
 } from './foundations';
-import components from './components';
-import { PropsWithChildren } from 'react';
-import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
 
 export const SimplifyProvider = ({ children }: PropsWithChildren) => {
   const theme: Theme = createTheme({

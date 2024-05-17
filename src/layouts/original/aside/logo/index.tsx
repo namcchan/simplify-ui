@@ -1,11 +1,11 @@
-import { Box, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
 
 export const Logo = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
 
-  const primaryDark = theme.palette.primary.dark;
-  const primaryMain = theme.palette.primary.main;
-  const primaryLight = theme.palette.primary.dark;
+  // const primaryDark = theme.palette.primary.dark;
+  // const primaryMain = theme.palette.primary.main;
+  // const primaryLight = theme.palette.primary.dark;
 
   return (
     <Box

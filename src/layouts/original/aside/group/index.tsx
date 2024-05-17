@@ -1,12 +1,14 @@
 'use client';
 
-import { Box, Collapse, List, ListItemText, Typography, alpha, useTheme } from '@mui/material';
-import { useState } from 'react';
-import { AsideItem, AsideItemIcon } from './styles';
+import { alpha, Box, Collapse, List, ListItemText, Typography, useTheme } from '@mui/material';
 import _ from 'lodash';
-import { useDashboardLayout } from '../../provider';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
 import { Iconify } from '@/components';
-import { useLocation, Link } from 'react-router-dom';
+
+import { useDashboardLayout } from '../../provider';
+import { AsideItem, AsideItemIcon } from './styles';
 
 export default function AsideGroup({ data = [], ...other }: any) {
   const { isMinimize } = useDashboardLayout();

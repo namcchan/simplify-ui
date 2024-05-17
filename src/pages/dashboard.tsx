@@ -1,8 +1,9 @@
-import { WelcomeCard } from '@/components';
 import { Button, Card, Container } from '@mui/material';
-import { IconWelcome2 } from '@/components/icons';
 import Grid from '@mui/material/Unstable_Grid2';
-import { NewInvoice, CurrentDownload, SummaryCard, TopRelatedApplications } from '@/sections/app';
+
+import { WelcomeCard } from '@/components';
+import { IconWelcome2 } from '@/components/icons';
+import { CurrentDownload, NewInvoice, SummaryCard, TopRelatedApplications } from '@/sections/app';
 import { AreaInstalled } from '@/sections/app/area-installed.tsx';
 
 const DashboardPage = () => {

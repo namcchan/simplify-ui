@@ -1,5 +1,5 @@
+import { ListItemButton, ListItemIcon, ListItemIconProps } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { ListItemIcon, ListItemButton, ListItemIconProps } from '@mui/material';
 
 export const AsideItem = styled((props: any) => <ListItemButton disableGutters {...props} />)(
   ({ theme }) => ({

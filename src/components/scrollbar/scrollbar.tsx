@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+
 import { StyledRootScrollbar, StyledScrollbar } from './styles';
 
 export function Scrollbar({ children, sx, ...other }: any) {

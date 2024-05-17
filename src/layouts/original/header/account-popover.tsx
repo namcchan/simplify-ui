@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Theme, alpha } from '@mui/material/styles';
 import {
+  Avatar,
   Box,
   Divider,
-  Typography,
-  Stack,
-  MenuItem,
-  Avatar,
   IconButton,
+  MenuItem,
   Popover,
+  Stack,
+  Typography,
 } from '@mui/material';
+import { alpha, Theme } from '@mui/material/styles';
+import { useState } from 'react';
 
 const MENU_OPTIONS = [
   {

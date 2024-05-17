@@ -1,6 +1,6 @@
 import { Box, Card, CardHeader, useTheme } from '@mui/material';
-import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
+import ReactApexChart from 'react-apexcharts';
 
 export const CurrentDownload = () => {
   const theme = useTheme();

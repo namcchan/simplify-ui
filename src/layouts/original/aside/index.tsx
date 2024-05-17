@@ -1,13 +1,15 @@
-import { Iconify } from '@/components';
-import { useResponsive } from '@/hooks';
 import { Box, Drawer, IconButton, Stack } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
-import { AsideGroupType } from '../../types';
-import { Logo } from './logo';
-import { SIDEBAR_MINI_WIDTH, SIDEBAR_WIDTH } from '@/layouts/constants.ts';
-import { useDashboardLayout } from '../provider';
-import AsideGroup from '@/layouts/original/aside/group';
+
+import { Iconify } from '@/components';
 import { Scrollbar } from '@/components/scrollbar';
+import { useResponsive } from '@/hooks';
+import { SIDEBAR_MINI_WIDTH, SIDEBAR_WIDTH } from '@/layouts/constants.ts';
+import AsideGroup from '@/layouts/original/aside/group';
+
+import { AsideGroupType } from '../../types';
+import { useDashboardLayout } from '../provider';
+import { Logo } from './logo';
 
 type Props = {
   groups: AsideGroupType[];

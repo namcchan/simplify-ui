@@ -1,17 +1,19 @@
-import { Iconify } from '@/components';
 import { AppBar, AppBarProps, Box, IconButton, Stack, Toolbar } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import AccountPopover from './account-popover';
-import LanguagePopover from './language-popover';
-import NotificationsPopover from './notification-popover';
-import { bgBlur } from '@/utils';
-import { useDashboardLayout } from '../provider';
+
+import { Iconify } from '@/components';
 import {
   HEADER_DESKTOP,
   HEADER_MOBILE,
   SIDEBAR_MINI_WIDTH,
   SIDEBAR_WIDTH,
 } from '@/layouts/constants.ts';
+import { bgBlur } from '@/utils';
+
+import { useDashboardLayout } from '../provider';
+import AccountPopover from './account-popover';
+import LanguagePopover from './language-popover';
+import NotificationsPopover from './notification-popover';
 
 const StyledAppBar = styled((props: AppBarProps & { state: any }) => <AppBar {...props} />)(({
   theme,

@@ -1,4 +1,5 @@
 import { Palette } from '@mui/material';
+
 import { COLORS } from './colors';
 import { rgba } from './functions';
 
@@ -75,14 +76,8 @@ export function customShadows(palette: Palette): CustomShadows {
     warning: `0 8px 16px 0 ${rgba(palette.warning.main, 0.24)}`,
     error: `0 8px 16px 0 ${rgba(palette.error.main, 0.24)}`,
 
-    card: `0 0 2px 0 ${rgba(color, 0.2)}, 0 12px 24px -4px ${rgba(
-      color,
-      0.12
-    )}`,
+    card: `0 0 2px 0 ${rgba(color, 0.2)}, 0 12px 24px -4px ${rgba(color, 0.12)}`,
     dialog: `-40px 40px 80px -8px ${rgba(color, 0.24)}`,
-    dropdown: `0 0 2px 0 ${rgba(color, 0.24)}, -20px 20px 40px -4px ${rgba(
-      color,
-      0.24
-    )}`,
+    dropdown: `0 0 2px 0 ${rgba(color, 0.24)}, -20px 20px 40px -4px ${rgba(color, 0.24)}`,
   };
 }

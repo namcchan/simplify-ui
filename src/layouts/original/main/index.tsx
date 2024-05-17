@@ -1,4 +1,5 @@
 import { styled } from '@mui/material';
+
 import { HEADER_DESKTOP, HEADER_MOBILE } from '@/layouts/constants.ts';
 
 export const Main = styled('main')(({ theme }) => ({

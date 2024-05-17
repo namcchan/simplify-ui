@@ -1,16 +1,17 @@
+import 'simplebar-react/dist/simplebar.min.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { SimplifyProvider } from './theme';
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from 'react-router-dom';
+
 import OriginalLayout from './layouts/original';
 import Dashboard from './pages/dashboard.tsx';
-
-import 'simplebar-react/dist/simplebar.min.css';
+import { SimplifyProvider } from './theme';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

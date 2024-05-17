@@ -1,5 +1,6 @@
 import { Paper, Stack, Typography, useTheme } from '@mui/material';
 import React from 'react';
+
 import { SvgColor } from '@/components';
 
 type Props = {

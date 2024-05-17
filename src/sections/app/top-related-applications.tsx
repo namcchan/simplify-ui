@@ -1,4 +1,5 @@
 import { Avatar, Box, Card, CardHeader, Stack } from '@mui/material';
+
 import { Scrollbar } from '@/components/scrollbar';
 
 export const TopRelatedApplications = () => {
