@@ -14,6 +14,7 @@ export const WelcomeCard = ({ title, description, illustrationComponent }: Props
       alignItems="center"
       borderRadius={2}
       sx={{
+        height: { xs: 'auto', md: 320 },
         color: 'primary.darker',
         backgroundImage: `linear-gradient(135deg, ${alpha(
           theme.palette.primary.light,
@@ -28,7 +29,7 @@ export const WelcomeCard = ({ title, description, illustrationComponent }: Props
         <Typography variant="body2" component="p" sx={{ opacity: 0.8 }} mb={3}>
           {description}
         </Typography>
-        <Button color="primary" size="small">
+        <Button color="primary" size="medium">
           Go Now
         </Button>
       </Stack>

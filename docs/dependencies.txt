@@ -1,0 +1,125 @@
+// Core
+"@emotion/cache"
+"@emotion/react"
+"@emotion/styled"
+"@mui/lab"
+"@mui/material"
+"@mui/system"
+"@mui/x-data-grid"
+"@mui/x-date-pickers"
+"react"
+"react-dom"
+"react-scripts"
+
+// Icon lib
+"@iconify/react"
+
+// Highlight Text
+"autosuggest-highlight"
+
+// Progress bar when change router
+"nprogress"
+
+// Document Title
+"react-helmet-async"
+
+// Calendar
+"@fullcalendar/common",
+"@fullcalendar/daygrid",
+"@fullcalendar/interaction",
+"@fullcalendar/list",
+"@fullcalendar/react",
+"@fullcalendar/timegrid",
+"@fullcalendar/timeline",
+
+// Form Validation
+"react-hook-form"
+"@hookform/resolvers"
+"yup"
+
+// Authentication
+"@auth0/auth0-spa-js"
+"amazon-cognito-identity-js"
+"jwt-decode"
+"jsonwebtoken"
+"firebase"
+
+// Map
+"react-map-gl"
+"mapbox-gl"
+"worker-loader"
+
+// Multi Language
+"i18next"
+"i18next-browser-languagedetector"
+"react-i18next"
+
+// Chart
+"apexcharts"
+"react-apexcharts"
+
+// Kanban
+"@hello-pangea/dnd"
+
+// Markdown
+"react-markdown"
+"rehype-raw"
+"highlight.js"
+
+// Carousel
+"react-slick"
+"slick-carousel"
+
+// Redux
+"react-redux"
+"@reduxjs/toolkit"
+"redux"
+"redux-persist"
+
+// Rich Text Editor
+"react-quill"
+
+// PDF Render
+"@react-pdf/renderer"
+
+// Right to Left
+"stylis"
+"stylis-plugin-rtl"
+
+// Router
+"history"
+"react-router"
+"react-router-dom",
+
+// Animate
+"framer-motion"
+
+// Upload
+"react-dropzone"
+
+// Custom scroll bar
+"simplebar-react"
+
+// Snackbar
+"notistack"
+
+// Format Date
+"date-fns"
+
+// Format Text
+"change-case"
+
+// Format Number
+"numeral"
+
+// Call API
+"axios"
+
+// Lazyload Image
+"react-lazy-load-image-component"
+
+// Lightbox
+"yet-another-react-lightbox"
+
+// Utils
+"lodash"

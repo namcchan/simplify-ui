@@ -1,5 +1,7 @@
-import 'simplebar-react/dist/simplebar.min.css';
+import './global.css';
+import './utils/i18n';
 
+import { SnackbarProvider } from 'notistack';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
@@ -11,7 +13,7 @@ import {
 
 import OriginalLayout from './layouts/original';
 import Dashboard from './pages/dashboard.tsx';
-import { SimplifyProvider } from './theme';
+import { AppThemeProvider } from './theme';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,8 +30,10 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <SimplifyProvider>
-      <RouterProvider router={router} />
-    </SimplifyProvider>
+    <AppThemeProvider>
+      <SnackbarProvider>
+        <RouterProvider router={router} />
+      </SnackbarProvider>
+    </AppThemeProvider>
   </React.StrictMode>,
 );

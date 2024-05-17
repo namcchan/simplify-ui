@@ -1,17 +1,20 @@
-import { Button, Card, Container } from '@mui/material';
+import { Card, Container, Paper } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
 import { WelcomeCard } from '@/components';
 import { IconWelcome2 } from '@/components/icons';
-import { CurrentDownload, NewInvoice, SummaryCard, TopRelatedApplications } from '@/sections/app';
+import {
+  CurrentDownload,
+  FeaturedAppSlider,
+  NewInvoice,
+  SummaryCard,
+  TopRelatedApplications,
+} from '@/sections/app';
 import { AreaInstalled } from '@/sections/app/area-installed.tsx';
 
 const DashboardPage = () => {
   return (
     <Container maxWidth="xl">
-      <Button size="medium" sx={{ mb: 5 }}>
-        CLick me!
-      </Button>
       <Grid container spacing={3}>
         <Grid xs={12} md={8}>
           <WelcomeCard
@@ -21,7 +24,9 @@ const DashboardPage = () => {
           />
         </Grid>
         <Grid xs={12} md={4}>
-          <Card sx={{ minHeight: 200 }}></Card>
+          <Paper sx={{ minHeight: 200, boxShadow: 'none' }}>
+            <FeaturedAppSlider />
+          </Paper>
         </Grid>
         <Grid xs={12} md={4}>
           <SummaryCard title="Total Active Users" numberPercent={89.4} numberShort={437000} />
