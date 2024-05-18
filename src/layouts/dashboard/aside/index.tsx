@@ -5,7 +5,7 @@ import { Iconify } from '@/components';
 import { Scrollbar } from '@/components/scrollbar';
 import { useResponsive } from '@/hooks';
 import { SIDEBAR_MINI_WIDTH, SIDEBAR_WIDTH } from '@/layouts/constants.ts';
-import AsideGroup from '@/layouts/original/aside/group';
+import AsideGroup from '@/layouts/dashboard/aside/group';
 
 import { AsideGroupType } from '../../types';
 import { useDashboardLayout } from '../provider';
