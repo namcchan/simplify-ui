@@ -19,7 +19,9 @@ export const SummaryCard: React.FC<Props> = ({
   return (
     <Paper sx={{ p: 3, display: 'flex' }}>
       <Stack>
-        <Typography variant="body2">{title}</Typography>
+        <Typography variant="subtitle2" fontWeight="600">
+          {title}
+        </Typography>
         <Stack direction="row" alignItems="center" sx={{ mt: 2, mb: 1 }} gap={1}>
           <SvgColor
             src="/assets/icons/duotone/ic_solar.svg"
