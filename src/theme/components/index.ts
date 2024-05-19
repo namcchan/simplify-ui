@@ -17,7 +17,19 @@ const components: ThemeOptions['components'] = {
     },
   },
   MuiAlertTitle: {},
-  MuiAppBar: {},
+  MuiAppBar: {
+    defaultProps: {
+      color: 'transparent',
+      elevation: 0,
+    },
+    styleOverrides: {
+      root: {
+        borderRadius: 0,
+        boxShadow: 'none',
+        overflow: 'visible',
+      },
+    },
+  },
   MuiAutocomplete: {
     styleOverrides: {
       paper: ({ theme }) => ({
@@ -424,7 +436,20 @@ const components: ThemeOptions['components'] = {
   },
   MuiToggleButton: {},
   MuiToggleButtonGroup: {},
-  MuiToolbar: {},
+  MuiToolbar: {
+    styleOverrides: {
+      root: ({ theme }) => ({
+        backdropFilter: 'blur(6px)',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        minHeight: theme.spacing(8),
+        transition:
+          'all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+        [theme.breakpoints.up('md')]: {
+          minHeight: theme.spacing(10),
+        },
+      }),
+    },
+  },
   MuiTooltip: {
     styleOverrides: {
       tooltip: ({ theme }) => ({
