@@ -4,7 +4,7 @@ import {
   Button,
   Container,
   Link,
-  ListItemButton,
+  Stack,
   SxProps,
   Toolbar,
   useScrollTrigger,
@@ -12,6 +12,8 @@ import {
 import React from 'react';
 
 import { Logo } from '@/components/logo';
+
+import { NavItem } from './styles';
 
 interface Props {
   /**
@@ -50,15 +52,18 @@ export const MainHeader = () => {
       <AppBar>
         <ElevationScroll>
           <Toolbar disableGutters>
-            <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
+            <Container sx={{ height: 1, display: 'flex', alignItems: 'center', gap: 3 }}>
               <Logo />
               <Box flexGrow={1} />
-              <Link>
-                <ListItemButton>Home</ListItemButton>
-              </Link>
-              <Link>
-                <ListItemButton>Components</ListItemButton>
-              </Link>
+              <Stack direction="row" alignItems="center" gap={5}>
+                <Link underline="none" variant="inherit" color="inherit">
+                  <NavItem disableRipple>Home</NavItem>
+                </Link>
+                <Link underline="none" variant="inherit" color="inherit">
+                  <NavItem disableRipple>Components</NavItem>
+                </Link>
+              </Stack>
+
               <Button size="medium" variant="outlined">
                 Login
               </Button>
